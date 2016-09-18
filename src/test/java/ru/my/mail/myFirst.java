@@ -29,18 +29,9 @@ public class myFirst {
         wd.findElement(By.xpath(".//*[@id='leftmenu']/div[2]/a/span")).click();
         wd.findElement(By.cssSelector("a.profile-menu__tile.m-video")).click();
     }
-    
     @AfterMethod
     public void tearDown() {
         wd.quit();
     }
-    
-    public static boolean isAlertPresent(FirefoxDriver wd) {
-        try {
-            wd.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-    }
+
 }
