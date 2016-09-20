@@ -1,25 +1,24 @@
-package ru.my.mail;
+package ru.my.mail.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class PublisherNewMicropost {
+/**
+ * Created by aleksandr.petrov on 20.09.16.
+ */
+public class ApplicationManager {
     FirefoxDriver wd;
-    
-    @BeforeMethod
-    public void setUp() throws Exception {
+
+    public void init() {
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         wd.get("http://m.my.mail.ru/cgi-bin/login");
         login("testqaqa", "Mytesting");
     }
 
-    private void login(String username, String password) {
+    public void login(String username, String password) {
         wd.findElement(By.name("Login")).click();
         wd.findElement(By.name("Login")).clear();
         wd.findElement(By.name("Login")).sendKeys(username);
@@ -29,27 +28,23 @@ public class PublisherNewMicropost {
         wd.findElement(By.xpath("//div[@class='heightContent']/form/div[3]/input")).click();
     }
 
-    @Test
-    public void testPublisherNewMicropost() {
-        goToPublisherPage();
-        fillPublisherForm("test");
-        submitPublisherCreation();
-    }
-
-    private void submitPublisherCreation() {
+    public void submitPublisherCreation() {
         wd.findElement(By.xpath("//div[@class='menu__list']//span[.='Отпр.']")).click();
     }
 
-    private void fillPublisherForm(String name) {
+    public void fillPublisherForm(String name) {
         wd.findElement(By.name("arg_text")).sendKeys(name);
     }
 
-    private void goToPublisherPage() {
+    public void goToPublisherPage() {
         wd.findElement(By.cssSelector("a.menu__item.m-publish")).click();
     }
 
-    @AfterMethod
-    public void tearDown() {
+    public void stop() {
         wd.quit();
+    }
+
+    public void goToFriendPage() {
+        wd.findElement(By.linkText("Друзья")).click();
     }
 }
