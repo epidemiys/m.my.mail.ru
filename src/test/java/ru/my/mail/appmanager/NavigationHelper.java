@@ -6,19 +6,17 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 /**
  * Created by aleksandr.petrov on 20.09.16.
  */
-public class NavigationHelper {
-    private FirefoxDriver wd;
+public class NavigationHelper extends HelperBase {
 
     public NavigationHelper(FirefoxDriver wd) {
-        this.wd = wd;
-    }
+        super(wd);    }
 
     public void goToPublisherPage() {
-        wd.findElement(By.cssSelector("a.menu__item.m-publish")).click();
+        click(By.cssSelector("a.menu__item.m-publish"));
     }
 
     public void goToFriendPage() {
-        wd.findElement(By.xpath("//*[@id='leftmenu']/div[4]/a/i")).click();
+        click(By.xpath("//*[@id='leftmenu']/div[4]/a/i"));
 
     }
 }

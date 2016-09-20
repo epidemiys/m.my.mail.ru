@@ -6,14 +6,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 /**
  * Created by aleksandr.petrov on 20.09.16.
  */
-public class FriendHelper {
-    private FirefoxDriver wd;
+public class FriendHelper extends HelperBase {
 
     public FriendHelper(FirefoxDriver wd) {
-        this.wd = wd;
-    }
+        super(wd);    }
 
     public void openFriendPhotos() {
-        wd.findElement(By.xpath("//*[@id='wrap']/div[5]/ul/li[1]/a/span[2]/span/span[1]")).click();
+        click(By.xpath("//*[@id='wrap']/div[5]/ul/li[1]/a/span[2]/span/span[1]"));
     }
 }
