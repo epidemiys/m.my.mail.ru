@@ -10,6 +10,7 @@ public class FriendsForm extends TestBase {
 
     @Test
     public void testFriendsForm() {
-        app.goToFriendPage();
+        app.getNavigationHelper().goToFriendPage();
+        app.getFriendHelperHelper().openFriendPhotos();
     }
 }

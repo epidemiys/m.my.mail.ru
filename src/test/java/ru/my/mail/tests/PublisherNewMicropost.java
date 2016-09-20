@@ -10,9 +10,9 @@ public class PublisherNewMicropost extends TestBase {
 
     @Test
     public void testPublisherNewMicropost() {
-        app.goToPublisherPage();
-        app.fillPublisherForm("test");
-        app.submitPublisherCreation();
+        app.getNavigationHelper().goToPublisherPage();
+        app.getPublisherHelper().fillPublisherForm("test");
+        app.getPublisherHelper().submitPublisherCreation();
     }
 
 }
