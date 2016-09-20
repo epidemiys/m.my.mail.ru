@@ -6,31 +6,38 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class myFirst {
+public class PublisherNewMicropost {
     FirefoxDriver wd;
     
     @BeforeMethod
     public void setUp() throws Exception {
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        wd.get("https://m.my.mail.ru/cgi-bin/login?page=https%3A%2F%2Fm.my.mail.ru%2F");
+    }
+    
+    @Test
+    public void PublisherNewMicropost() {
+        wd.get("http://m.my.mail.ru/cgi-bin/login");
+        wd.findElement(By.name("Login")).click();
+        wd.findElement(By.name("Login")).sendKeys("\\undefined");
+        wd.findElement(By.name("Password")).click();
+        wd.findElement(By.name("Password")).sendKeys("\\undefined");
         wd.findElement(By.name("Login")).click();
         wd.findElement(By.name("Login")).clear();
-        wd.findElement(By.name("Login")).sendKeys("testqaqa1@mail.ru");
+        wd.findElement(By.name("Login")).sendKeys("testqaqa");
         wd.findElement(By.name("Password")).click();
         wd.findElement(By.name("Password")).clear();
         wd.findElement(By.name("Password")).sendKeys("Mytesting");
         wd.findElement(By.xpath("//div[@class='heightContent']/form/div[3]/input")).click();
+        wd.findElement(By.cssSelector("a.menu__item.m-publish")).click();
+        wd.findElement(By.name("arg_text")).click();
+        wd.findElement(By.name("arg_text")).clear();
+        wd.findElement(By.name("arg_text")).sendKeys("test");
+        wd.findElement(By.xpath("//div[@class='menu__list']//span[.='Отпр.']")).click();
     }
     
-    @Test
-    public void MyFirstTest() {
-        wd.findElement(By.xpath(".//*[@id='leftmenu']/div[2]/a/span")).click();
-        wd.findElement(By.cssSelector("a.profile-menu__tile.m-video")).click();
-    }
     @AfterMethod
     public void tearDown() {
         wd.quit();
     }
-
 }
