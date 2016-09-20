@@ -16,8 +16,8 @@ public class PublisherHelper extends HelperBase {
         click(By.xpath("//div[@class='menu__list']//span[.='Отпр.']"));
     }
 
-    public void fillPublisherForm() {
-        click(By.name("arg_text"));
+    public void fillPublisherForm(String text) {
+        type(By.name("arg_text"),text);
     }
 
 }
