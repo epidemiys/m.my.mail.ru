@@ -73,4 +73,24 @@ public class NavigationHelper extends HelperBase {
     public void goToMyMusicMyReccomendationPage() {
         click(By.xpath("//*[@class='tabs']/div[4]"));
     }
+
+    public void goToGuestPage() {
+        click(By.xpath("//*[@class='leftmenu__pic m-guests']"));
+    }
+
+    public void goToMassegePage() {
+        click(By.xpath("//*[@class='menu__item m-discussion']"));
+    }
+
+    public void goToNewsFeeld() {
+        click(By.xpath("//*[@class='leftmenu__pic m-feed']"));
+    }
+
+    public void goToNotificationPage() {
+        click(By.xpath("//*[@class='menu__item m-notify']"));
+    }
+
+    public void goToMyVideoPage() {
+        click(By.xpath("//*[@class='leftmenu__pic m-videotop']"));
+    }
 }
