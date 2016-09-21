@@ -48,4 +48,29 @@ public class NavigationHelper extends HelperBase {
     public void goToMyProfileVideo() {
         click(By.xpath("//*[@class='profile-menu__tile m-video']"));
     }
+
+    public void goToMyMusicPage() {
+        click(By.xpath("//*[@class='leftmenu__pic m-music']"));
+    }
+
+    public void goToMyMusicCatalog() {
+        click(By.xpath("//*[@class='tabs']/div[1]"));
+    }
+
+    public void goToMyMusicMyMusicPage() {
+        click(By.xpath("//*[@class='tabs']/div[2]"));
+    }
+
+    public void goToMyMusicMyMusicPlaylistCheck() {
+        //Необходимо оптимизировать xpath
+        click(By.xpath("//*[@id='wrap']/div[5]/div[3]/div[2]/a"));
+    }
+
+    public void goToMyMusicFriends() {
+        click(By.xpath("//*[@class='tabs']/div[3]"));
+    }
+
+    public void goToMyMusicMyReccomendationPage() {
+        click(By.xpath("//*[@class='tabs']/div[4]"));
+    }
 }
