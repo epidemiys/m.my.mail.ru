@@ -1,4 +1,4 @@
-package ru.my.mail.tests;
+package ru.my.mail.tests.publisher;
 
 import org.testng.annotations.Test;
 import ru.my.mail.model.TestBase;

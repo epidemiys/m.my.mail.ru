@@ -1,0 +1,7 @@
+package ru.my.mail.tests.messege;
+
+/**
+ * Created by aleksandr.petrov on 21.09.16.
+ */
+public class MassegeListCheck {
+}
