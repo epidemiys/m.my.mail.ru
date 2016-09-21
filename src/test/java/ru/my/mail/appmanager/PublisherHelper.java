@@ -13,11 +13,11 @@ public class PublisherHelper extends HelperBase {
     }
 
     public void submitPublisherCreation() {
-        click(By.xpath("//div[@class='menu__list']//span[.='Отпр.']"));
+        click(By.xpath("//*[@class='menu__button mm-clickable mm-publisherSend mm-count']"));
     }
 
     public void fillPublisherForm(String text) {
-        type(By.name("arg_text"),text);
+        type(By.name("arg_text"), text);
     }
 
 }

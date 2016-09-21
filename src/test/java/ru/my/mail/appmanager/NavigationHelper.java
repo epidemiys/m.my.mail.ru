@@ -9,14 +9,19 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class NavigationHelper extends HelperBase {
 
     public NavigationHelper(FirefoxDriver wd) {
-        super(wd);    }
+        super(wd);
+    }
 
     public void goToPublisherPage() {
         click(By.cssSelector("a.menu__item.m-publish"));
     }
 
     public void goToFriendPage() {
-        click(By.xpath("//*[@id='leftmenu']/div[4]/a/i"));
+        click(By.xpath("//*[@class='leftmenu__pic m-friends']"));
 
+    }
+
+    public void goToMyProfilePage() {
+        click(By.xpath("//*[@class='leftmenu__pic m-avatar']"));
     }
 }

@@ -11,6 +11,17 @@ public class FriendsForm extends TestBase {
     @Test
     public void testFriendsForm() {
         app.getNavigationHelper().goToFriendPage();
-        app.getFriendHelperHelper().openFriendPhotos();
+        /*
+        Имя есть
+        Возраст есть
+        Страна есть
+        Аватар есть
+        Кнопка фото есть
+        Кнопка друзья есть
+        Кнопка группы есть
+        Кнопка подарки есть
+        Кнопка видео есть
+        Лента есть
+         */
     }
 }
