@@ -6,11 +6,12 @@ import ru.my.mail.model.TestBase;
 /**
  * Created by aleksandr.petrov on 21.09.16.
  */
-public class MyProfileCheck extends TestBase {
+public class MyProfileGrups extends TestBase {
 
     @Test
 
-    public void testMyProfilePage() {
+    public void testMyProfileGroups(){
         app.getNavigationHelper().goToMyProfilePage();
+        app.getNavigationHelper().goToMyProfileGroups();
     }
 }

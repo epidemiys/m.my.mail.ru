@@ -6,7 +6,7 @@ import ru.my.mail.model.TestBase;
 /**
  * Created by aleksandr.petrov on 20.09.16.
  */
-public class FriendsForm extends TestBase {
+public class FriendsFormCheck extends TestBase {
 
     @Test
     public void testFriendsForm() {
