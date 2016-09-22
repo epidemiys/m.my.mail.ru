@@ -12,7 +12,7 @@ public class ApplicationManager {
     FirefoxDriver wd;
 
     private NavigationHelper navigationHelper;
-    private FriendHelper friendHelper;
+    private ProfileHelper profileHelper;
     private PublisherHelper publisherHelper;
     private SessionHelper sessionHelper;
 
@@ -20,7 +20,7 @@ public class ApplicationManager {
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         wd.get("http://m.my.mail.ru/cgi-bin/login");
-        friendHelper = new FriendHelper(wd);
+        profileHelper = new ProfileHelper(wd);
         navigationHelper = new NavigationHelper(wd);
         publisherHelper = new PublisherHelper(wd);
         sessionHelper = new SessionHelper(wd);
@@ -31,8 +31,8 @@ public class ApplicationManager {
         wd.quit();
     }
 
-    public FriendHelper getFriendHelperHelper() {
-        return friendHelper;
+    public ProfileHelper getProfileHelper() {
+        return profileHelper;
     }
 
     public NavigationHelper getNavigationHelper() {

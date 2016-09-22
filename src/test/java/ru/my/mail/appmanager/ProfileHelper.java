@@ -6,9 +6,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 /**
  * Created by aleksandr.petrov on 20.09.16.
  */
-public class FriendHelper extends HelperBase {
+public class ProfileHelper extends HelperBase {
 
-    public FriendHelper(FirefoxDriver wd) {
+    public ProfileHelper(FirefoxDriver wd) {
         super(wd);
     }
 
