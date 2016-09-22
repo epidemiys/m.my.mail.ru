@@ -12,6 +12,6 @@ public class MyProfileGrups extends TestBase {
 
     public void testMyProfileGroups(){
         app.getNavigationHelper().goToMyProfilePage();
-        app.getNavigationHelper().goToMyProfileGroups();
+        app.getProfileHelper().openProfileGroups();
     }
 }

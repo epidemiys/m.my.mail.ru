@@ -12,6 +12,6 @@ public class MyProfilePhoto extends TestBase {
 
     public void testMyProfilePhoto(){
         app.getNavigationHelper().goToMyProfilePage();
-        app.getNavigationHelper().goToMyProfilePhoto();
+        app.getProfileHelper().openProfilePhoto();
     }
 }

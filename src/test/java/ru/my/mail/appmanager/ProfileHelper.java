@@ -12,7 +12,24 @@ public class ProfileHelper extends HelperBase {
         super(wd);
     }
 
-    public void openFriendPhotos() {
-        click(By.xpath(".//*[@class='profile-menu__tile m-photo']"));
+    public void openProfileFriends() {
+        click(By.xpath("//*[@class='profile-menu__tile m-friends']"));
     }
+
+    public void openProfileGroups() {
+        click(By.xpath("//*[@class='profile-menu__tile m-groups']"));
+    }
+
+    public void openProfilePhoto() {
+        click(By.xpath("//*[@class='profile-menu__tile m-photo']"));
+    }
+
+    public void openProfilePresents() {
+        click(By.xpath("//*[@class='profile-menu__tile m-gift']"));
+    }
+
+    public void openMyProfileVideo() {
+        click(By.xpath("//*[@class='profile-menu__tile m-video']"));
+    }
+
 }

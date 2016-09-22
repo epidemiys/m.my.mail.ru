@@ -12,6 +12,6 @@ public class MyProfileVideo extends TestBase {
 
     public void testMyProfileVideo(){
         app.getNavigationHelper().goToMyProfilePage();
-        app.getNavigationHelper().goToMyProfileVideo();
+        app.getProfileHelper().openMyProfileVideo();
     }
 }

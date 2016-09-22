@@ -12,6 +12,6 @@ public class MyProfileFriends extends TestBase{
 
     public void testMyProfileFriends(){
         app.getNavigationHelper().goToMyProfilePage();
-        app.getNavigationHelper().goToMyProfileFriends();
+        app.getProfileHelper().openProfileFriends();
     }
 }
