@@ -1,15 +1,16 @@
 package ru.my.mail.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * Created by aleksandr.petrov on 20.09.16.
  */
 public class HelperBase {
-    protected FirefoxDriver wd;
+    protected WebDriver wd;
 
-    public HelperBase(FirefoxDriver wd) {
+    public HelperBase(WebDriver wd) {
         this.wd = wd;
     }
 

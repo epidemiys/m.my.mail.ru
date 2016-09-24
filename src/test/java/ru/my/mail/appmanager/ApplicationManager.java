@@ -1,6 +1,9 @@
 package ru.my.mail.appmanager;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
 
 import java.util.concurrent.TimeUnit;
 
@@ -9,15 +12,27 @@ import java.util.concurrent.TimeUnit;
  */
 public class ApplicationManager {
 
-    FirefoxDriver wd;
+    WebDriver wd;
 
     private NavigationHelper navigationHelper;
     private ProfileHelper profileHelper;
     private PublisherHelper publisherHelper;
     private SessionHelper sessionHelper;
+    private String browser;
+
+    public ApplicationManager(String browser) {
+        this.browser = browser;
+    }
 
     public void init() {
-        wd = new FirefoxDriver();
+        if (browser.equals(BrowserType.CHROME)){
+            wd = new ChromeDriver();
+        } else if (browser.equals(BrowserType.SAFARI)) {
+            wd = new ChromeDriver();
+        } else if (browser.equals(BrowserType.FIREFOX)) {
+            wd = new FirefoxDriver();
+        }
+
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         wd.get("http://m.my.mail.ru/cgi-bin/login");
         profileHelper = new ProfileHelper(wd);
