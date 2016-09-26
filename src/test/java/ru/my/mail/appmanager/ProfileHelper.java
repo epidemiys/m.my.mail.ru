@@ -58,4 +58,9 @@ public class ProfileHelper extends HelperBase {
         return isElementPresent(By.xpath("//*[@class='profile-menu__tile m-video']"));
 
     }
+
+    public boolean checkProfileName() {
+        return isElementPresent(By.className("profile-head__user"))
+                    && wd.findElement(By.className("profile-head__user")).getText().equals("Testika()))(@№!$ Grepman");
+        }
 }

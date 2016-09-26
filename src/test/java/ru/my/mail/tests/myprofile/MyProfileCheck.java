@@ -19,6 +19,7 @@ public class MyProfileCheck extends TestBase {
         Assert.assertTrue(app.getProfileHelper().checkProfileGroupsList());
         Assert.assertTrue(app.getProfileHelper().checkProfilePresentsList());
         Assert.assertTrue(app.getProfileHelper().checkProfileVideoList());
+        Assert.assertTrue(app.getProfileHelper().checkProfileName());
     }
 }
 
