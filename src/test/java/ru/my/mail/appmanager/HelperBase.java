@@ -22,7 +22,6 @@ public class HelperBase {
 
     protected void type(By locator, String username) {
         if(username != null){
-            //wd.findElement(locator).click();
             wd.findElement(locator).clear();
             wd.findElement(locator).sendKeys(username);
         }
