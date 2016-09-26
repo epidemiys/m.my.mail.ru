@@ -1,5 +1,6 @@
 package ru.my.mail.tests.myprofile;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.my.mail.model.TestBase;
 
@@ -13,5 +14,6 @@ public class MyProfileVideo extends TestBase {
     public void testMyProfileVideo(){
         app.getNavigationHelper().goToMyProfilePage();
         app.getProfileHelper().openMyProfileVideo();
+        Assert.assertTrue(app.getProfileHelper().checkMyVideoAlbum());
     }
 }

@@ -2,7 +2,6 @@ package ru.my.mail.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * Created by aleksandr.petrov on 20.09.16.
@@ -19,7 +18,6 @@ public class NavigationHelper extends HelperBase {
 
     public void goToFriendPage() {
         click(By.xpath("//*[@class='leftmenu__pic m-friends']"));
-
     }
 
     public void goToMyProfilePage() {
@@ -27,7 +25,7 @@ public class NavigationHelper extends HelperBase {
     }
 
     public void goToGroupPage() {
-        click(By.xpath("//*[@class='leftmenu__pic m-friends']"));
+        click(By.cssSelector(".leftmenu__pic.m-groups"));
     }
 
     public void goToMyMusicPage() {
@@ -43,7 +41,6 @@ public class NavigationHelper extends HelperBase {
     }
 
     public void goToMyMusicMyMusicPlaylistCheck() {
-        //Необходимо оптимизировать xpath
         click(By.xpath("//*[@id='wrap']/div[5]/div[3]/div[2]/a"));
     }
 

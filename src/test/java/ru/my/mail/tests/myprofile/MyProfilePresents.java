@@ -1,5 +1,6 @@
 package ru.my.mail.tests.myprofile;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.my.mail.model.TestBase;
 
@@ -13,5 +14,7 @@ public class MyProfilePresents extends TestBase {
     public void testMyPhotoPresents(){
         app.getNavigationHelper().goToMyProfilePage();
         app.getProfileHelper().openProfilePresents();
+        Assert.assertTrue(app.getProfileHelper().checkMyPresentButtomSendPresent());
+        Assert.assertTrue(app.getProfileHelper().checkMyPresentItem());
     }
 }

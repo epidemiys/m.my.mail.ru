@@ -1,5 +1,6 @@
 package ru.my.mail.tests.myprofile;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.my.mail.model.TestBase;
 
@@ -13,5 +14,7 @@ public class MyProfileGrups extends TestBase {
     public void testMyProfileGroups(){
         app.getNavigationHelper().goToMyProfilePage();
         app.getProfileHelper().openProfileGroups();
+        Assert.assertTrue(app.getProfileHelper().checkSearchFormByMyGroups());
+        Assert.assertTrue(app.getProfileHelper().checkMyGroupsAvatar());
     }
 }

@@ -1,5 +1,6 @@
 package ru.my.mail.tests.myprofile;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.my.mail.model.TestBase;
 
@@ -13,5 +14,7 @@ public class MyProfileFriends extends TestBase{
     public void testMyProfileFriends(){
         app.getNavigationHelper().goToMyProfilePage();
         app.getProfileHelper().openProfileFriends();
+        Assert.assertTrue(app.getProfileHelper().checkSearchFormByMyFriends());
+        Assert.assertTrue(app.getProfileHelper().checkMyFriendsAvatar());
     }
 }
