@@ -35,4 +35,27 @@ public class ProfileHelper extends HelperBase {
     public boolean checkProfileAvatar() {
         return isElementPresent(By.xpath("//*[@class='profile-head__avatar']"));
     }
+
+    public boolean checkProfilePhotoList() {
+        return isElementPresent(By.xpath("//*[@class='profile-menu__tile m-photo']"));
+    }
+
+    public boolean checkProfileFriendsList() {
+        return isElementPresent(By.xpath("//*[@class='profile-menu__tile m-friends']"));
+
+    }
+
+    public boolean checkProfileGroupsList() {
+        return isElementPresent(By.xpath("//*[@class='profile-menu__tile m-groups']"));
+    }
+
+    public boolean checkProfilePresentsList() {
+        return isElementPresent(By.xpath("//*[@class='profile-menu__tile m-gift']"));
+
+    }
+
+    public boolean checkProfileVideoList() {
+        return isElementPresent(By.xpath("//*[@class='profile-menu__tile m-video']"));
+
+    }
 }
