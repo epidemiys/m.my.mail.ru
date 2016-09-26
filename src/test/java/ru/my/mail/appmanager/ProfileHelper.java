@@ -2,7 +2,6 @@ package ru.my.mail.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * Created by aleksandr.petrov on 20.09.16.
@@ -33,4 +32,7 @@ public class ProfileHelper extends HelperBase {
         click(By.xpath("//*[@class='profile-menu__tile m-video']"));
     }
 
+    public boolean checkProfileAvatar() {
+        return isElementPresent(By.xpath("//*[@class='profile-head__avatar']"));
+    }
 }

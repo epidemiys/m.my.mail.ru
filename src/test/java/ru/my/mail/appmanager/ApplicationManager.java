@@ -33,7 +33,7 @@ public class ApplicationManager {
             wd = new FirefoxDriver();
         }
 
-        wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         wd.get("http://m.my.mail.ru/cgi-bin/login");
         profileHelper = new ProfileHelper(wd);
         navigationHelper = new NavigationHelper(wd);

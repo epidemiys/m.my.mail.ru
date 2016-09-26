@@ -1,7 +1,9 @@
 package ru.my.mail.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
@@ -23,6 +25,16 @@ public class HelperBase {
             //wd.findElement(locator).click();
             wd.findElement(locator).clear();
             wd.findElement(locator).sendKeys(username);
+        }
+    }
+
+    protected boolean isElementPresent(By locator) {
+        try {
+            WebElement element = wd.findElement(locator);
+            return element != null;
+            }
+        catch(NoSuchElementException ex){
+            return false;
         }
     }
 }
