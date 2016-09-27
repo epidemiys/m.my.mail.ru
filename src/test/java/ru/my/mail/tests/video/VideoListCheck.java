@@ -1,5 +1,6 @@
 package ru.my.mail.tests.video;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.my.mail.model.TestBase;
 
@@ -12,5 +13,8 @@ public class VideoListCheck extends TestBase {
 
     public void testVideoListCheck(){
         app.getNavigationHelper().goToMyVideoPage();
+        Assert.assertTrue(app.getVideoHelper().checkFindForm());
+        Assert.assertTrue(app.getVideoHelper().checkFerstVideo());
+        Assert.assertTrue(app.getVideoHelper().checkMoreVideoButtom());
     }
 }

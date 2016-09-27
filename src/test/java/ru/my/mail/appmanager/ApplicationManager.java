@@ -19,6 +19,7 @@ public class ApplicationManager {
     private PublisherHelper publisherHelper;
     private SessionHelper sessionHelper;
     private NewsHelper newsHelper;
+    private VideoHelper videoHelper;
     private String browser;
 
     public ApplicationManager(String browser) {
@@ -41,6 +42,7 @@ public class ApplicationManager {
         publisherHelper = new PublisherHelper(wd);
         sessionHelper = new SessionHelper(wd);
         newsHelper = new NewsHelper(wd);
+        videoHelper = new VideoHelper(wd);
         sessionHelper.login("testqaqa", "Mytesting");
     }
 
@@ -62,6 +64,10 @@ public class ApplicationManager {
 
     public NewsHelper getNewsHelper(){
         return newsHelper;
+    }
+
+    public VideoHelper getVideoHelper(){
+        return videoHelper;
     }
 }
 
