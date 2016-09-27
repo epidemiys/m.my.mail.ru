@@ -1,5 +1,6 @@
 package ru.my.mail.tests.guests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.my.mail.model.TestBase;
 
@@ -12,5 +13,8 @@ public class GuestListCheck extends TestBase {
 
     public void testGuestListCheck(){
         app.getNavigationHelper().goToGuestPage();
+        Assert.assertTrue(app.getGuestHelper().checkFirstGuest());
+        Assert.assertTrue(app.getGuestHelper().checkLastVisitInfo());
+        Assert.assertTrue(app.getGuestHelper().checkMoreFriendsButtom());
     }
 }
