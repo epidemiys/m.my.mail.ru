@@ -21,4 +21,7 @@ public class PublisherHelper extends HelperBase {
         type(By.name("arg_text"), text);
     }
 
+    public boolean checkCreationMicropost() {
+        return wd.findElement(By.cssSelector(".event-text.m-primary")).getText().equals("123");
+    }
 }

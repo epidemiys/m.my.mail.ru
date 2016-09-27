@@ -61,12 +61,12 @@ public class ProfileHelper extends HelperBase {
 
     public boolean checkProfileName() {
         return isElementPresent(By.className("profile-head__user"))
-                    && wd.findElement(By.className("profile-head__user")).getText().equals("Testika()))(@№!$ Grepman");
+                    && wd.findElement(By.className("profile-head__user")).getText().equals("Testika Grepman");
         }
 
     public boolean checkProfileInfo() {
         return isElementPresent(By.className("profile-head__info"))
-                && wd.findElement(By.className("profile-head__info")).getText().equals("11 лет | Севастополь, Россия");
+                && wd.findElement(By.className("profile-head__info")).getText().equals("10 лет | Севастополь, Россия");
     }
 
     public boolean checkFirstEvent() {
