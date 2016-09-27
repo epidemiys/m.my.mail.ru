@@ -71,4 +71,11 @@ public class NavigationHelper extends HelperBase {
     public void goToMyVideoPage() {
         click(By.xpath("//*[@class='leftmenu__pic m-videotop']"));
     }
+
+    public void gotoMyFirstFriend() {
+        /*
+        Оптимизировать xpath, а в идеале заменить css
+         */
+        click(By.xpath("//*[@id='wrap']/div[5]/ul/li[1]/a/span[1]"));
+    }
 }

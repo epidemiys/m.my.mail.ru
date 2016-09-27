@@ -1,5 +1,6 @@
 package ru.my.mail.tests.friends;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.my.mail.model.TestBase;
 
@@ -11,17 +12,14 @@ public class FriendsFormCheck extends TestBase {
     @Test
     public void testFriendsForm() {
         app.getNavigationHelper().goToFriendPage();
-        /*
-        Имя есть
-        Возраст есть
-        Страна есть
-        Аватар есть
-        Кнопка фото есть
-        Кнопка друзья есть
-        Кнопка группы есть
-        Кнопка подарки есть
-        Кнопка видео есть
-        Лента есть
-         */
+        app.getNavigationHelper().gotoMyFirstFriend();
+        Assert.assertTrue(app.getProfileHelper().checkProfileAvatar());
+        Assert.assertTrue(app.getProfileHelper().checkProfilePhotoButtom());
+        Assert.assertTrue(app.getProfileHelper().checkProfileFriendsButtom());
+        Assert.assertTrue(app.getProfileHelper().checkProfileGroupsButtom());
+        Assert.assertTrue(app.getProfileHelper().checkProfilePresentsButton());
+        Assert.assertTrue(app.getProfileHelper().checkProfileVideoButton());
+        Assert.assertTrue(app.getProfileHelper().checkFirstEvent());
+        Assert.assertTrue(app.getProfileHelper().checkMoreNews());
     }
 }

@@ -12,5 +12,6 @@ public class FriendsListPagination extends TestBase {
 
     public void testFriendsListPagination(){
         app.getNavigationHelper().goToFriendPage();
+        app.getProfileHelper().checkMoreNews();
     }
 }

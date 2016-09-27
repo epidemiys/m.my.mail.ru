@@ -125,4 +125,8 @@ public class ProfileHelper extends HelperBase {
     public boolean checkMyVideoAlbum() {
         return isElementPresent(By.cssSelector(".list-item"));
     }
+
+    public boolean checkMoreNews() {
+        return isElementPresent(By.cssSelector(".b-link.show-more.showEarlier.mm-clickable.mm-showMore.mm-count"));
+    }
 }
