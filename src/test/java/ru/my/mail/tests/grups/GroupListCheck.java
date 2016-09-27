@@ -1,5 +1,6 @@
 package ru.my.mail.tests.grups;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.my.mail.model.TestBase;
 
@@ -12,6 +13,11 @@ public class GroupListCheck extends TestBase {
 
     public void testElementPresent(){
         app.getNavigationHelper().goToGroupPage();
+        Assert.assertTrue(app.getGroupHelper().checkSearchInputForm());
+        Assert.assertTrue(app.getGroupHelper().checkFirstGroup());
+        Assert.assertTrue(app.getGroupHelper().checkGroupMebmerCount());
+        Assert.assertTrue(app.getGroupHelper().checkMoreGroupButtom());
+
     }
 
 }

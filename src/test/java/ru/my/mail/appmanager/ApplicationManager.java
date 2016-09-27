@@ -20,6 +20,7 @@ public class ApplicationManager {
     private SessionHelper sessionHelper;
     private NewsHelper newsHelper;
     private VideoHelper videoHelper;
+    private GroupHelper groupHelper;
     private String browser;
 
     public ApplicationManager(String browser) {
@@ -43,6 +44,7 @@ public class ApplicationManager {
         sessionHelper = new SessionHelper(wd);
         newsHelper = new NewsHelper(wd);
         videoHelper = new VideoHelper(wd);
+        groupHelper = new GroupHelper(wd);
         sessionHelper.login("testqaqa", "Mytesting");
     }
 
@@ -68,6 +70,10 @@ public class ApplicationManager {
 
     public VideoHelper getVideoHelper(){
         return videoHelper;
+    }
+
+    public GroupHelper getGroupHelper(){
+        return groupHelper;
     }
 }
 
