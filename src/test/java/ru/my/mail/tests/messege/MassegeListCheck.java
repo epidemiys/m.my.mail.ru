@@ -12,6 +12,6 @@ public class MassegeListCheck extends TestBase {
 
     public void testMassegeListCheck(){
         app.getNavigationHelper().goToMassegePage();
-        //Assert.assertTrue(app.getMassengerHelper().checkSearch);
+        Assert.assertTrue(app.getMassengerHelper().checkSearch);
     }
 }
