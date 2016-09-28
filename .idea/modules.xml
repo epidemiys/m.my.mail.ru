@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/m.my.mail.ru.iml" filepath="$PROJECT_DIR$/m.my.mail.ru.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/m.my.mail.ru.iml" filepath="$PROJECT_DIR$/.idea/modules/m.my.mail.ru.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/m.my.mail.ru_main.iml" filepath="$PROJECT_DIR$/.idea/modules/m.my.mail.ru_main.iml" group="m.my.mail.ru" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/m.my.mail.ru_test.iml" filepath="$PROJECT_DIR$/.idea/modules/m.my.mail.ru_test.iml" group="m.my.mail.ru" />
     </modules>
   </component>
 </project>

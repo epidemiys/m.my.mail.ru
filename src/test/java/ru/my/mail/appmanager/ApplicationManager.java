@@ -22,6 +22,7 @@ public class ApplicationManager {
     private VideoHelper videoHelper;
     private GroupHelper groupHelper;
     private GuestHelper guestHelper;
+    private MassengerHelper massengerHelper;
     private String browser;
 
     public ApplicationManager(String browser) {
@@ -47,6 +48,7 @@ public class ApplicationManager {
         videoHelper = new VideoHelper(wd);
         groupHelper = new GroupHelper(wd);
         guestHelper = new GuestHelper(wd);
+        massengerHelper = new MassengerHelper(wd);
         sessionHelper.login("testqaqa", "Mytesting");
     }
 
@@ -80,6 +82,10 @@ public class ApplicationManager {
 
     public GroupHelper getGuestHelper(){
         return groupHelper;
+    }
+
+    public MassengerHelper getMassengerHelper(){
+        return massengerHelper;
     }
 }
 
