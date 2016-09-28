@@ -27,4 +27,16 @@ public class GroupHelper extends HelperBase {
     public boolean checkMoreGroupButtom() {
         return isElementPresent(By.cssSelector(".show-more.mm-clickable.mm-getGroups"));
     }
+
+    public boolean checkFirstGuest() {
+        return isElementPresent(By.cssSelector(".list-item"));
+    }
+
+    public boolean checkLastVisitInfo() {
+        return isElementPresent(By.cssSelector(".list-item__date"));
+    }
+
+    public boolean checkMoreFriendsButtom() {
+        return isElementPresent(By.cssSelector(".show-more.mm-clickable.mm-showMore"));
+    }
 }
