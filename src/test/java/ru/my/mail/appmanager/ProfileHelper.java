@@ -66,7 +66,7 @@ public class ProfileHelper extends HelperBase {
 
     public boolean checkProfileInfo() {
         return isElementPresent(By.className("profile-head__info"))
-                && wd.findElement(By.className("profile-head__info")).getText().equals("10 лет | Севастополь, Россия");
+                && wd.findElement(By.className("profile-head__info")).getText().equals("11 лет | Севастополь, Россия");
     }
 
     public boolean checkFirstEvent() {

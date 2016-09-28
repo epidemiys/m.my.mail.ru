@@ -1,5 +1,6 @@
 package ru.my.mail.tests.notification;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.my.mail.model.TestBase;
 
@@ -12,5 +13,7 @@ public class NotificationListCheck extends TestBase {
 
     public void testNotificationListCheck(){
         app.getNavigationHelper().goToNotificationPage();
+        Assert.assertTrue(app.getNotificationHelper().checkFirstGuest());
+        Assert.assertTrue(app.getNotificationHelper().checkGuestDataInfo());
     }
 }

@@ -40,7 +40,7 @@ public class NavigationHelper extends HelperBase {
         click(By.xpath("//*[@class='tabs']/div[2]"));
     }
 
-    public void goToMyMusicMyMusicPlaylistCheck() {
+    public void goToMyMusicMyMusicPlaylist() {
         click(By.xpath("//*[@id='wrap']/div[5]/div[3]/div[2]/a"));
     }
 

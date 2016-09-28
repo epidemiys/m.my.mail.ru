@@ -1,5 +1,6 @@
 package ru.my.mail.tests.music;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.my.mail.model.TestBase;
 
@@ -13,6 +14,9 @@ public class MyMusicMyMusicPlaylistCheck extends TestBase{
     public void testMyMusicMyMusicPlaylistCheck(){
         app.getNavigationHelper().goToMyMusicPage();
         app.getNavigationHelper().goToMyMusicMyMusicPage();
-        app.getNavigationHelper().goToMyMusicMyMusicPlaylistCheck();
+        app.getNavigationHelper().goToMyMusicMyMusicPlaylist();
+        Assert.assertTrue(app.getMusicHelper().checkFirstPlaylist());
+        Assert.assertTrue(app.getMusicHelper().checkPlaylistInfo());
+
     }
 }

@@ -22,7 +22,9 @@ public class ApplicationManager {
     private VideoHelper videoHelper;
     private GroupHelper groupHelper;
     private GuestHelper guestHelper;
-    private MassengerHelper massengerHelper;
+    private MessengerHelper messengerHelper;
+    private MusicHelper musicHelper;
+    private NotificationHelper notificationHelper;
     private String browser;
 
     public ApplicationManager(String browser) {
@@ -48,7 +50,10 @@ public class ApplicationManager {
         videoHelper = new VideoHelper(wd);
         groupHelper = new GroupHelper(wd);
         guestHelper = new GuestHelper(wd);
-        massengerHelper = new MassengerHelper(wd);
+        musicHelper = new MusicHelper(wd);
+        notificationHelper = new NotificationHelper(wd);
+
+        messengerHelper = new MessengerHelper(wd);
         sessionHelper.login("testqaqa", "Mytesting");
     }
 
@@ -84,8 +89,17 @@ public class ApplicationManager {
         return groupHelper;
     }
 
-    public MassengerHelper getMassengerHelper(){
-        return massengerHelper;
+    public MessengerHelper getMessengerHelper() {
+        return messengerHelper;
     }
+
+    public MusicHelper getMusicHelper() {
+        return musicHelper;
+    }
+
+    public NotificationHelper getNotificationHelper() {
+        return notificationHelper;
+    }
+
 }
 

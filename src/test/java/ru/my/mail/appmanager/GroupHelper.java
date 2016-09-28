@@ -39,4 +39,8 @@ public class GroupHelper extends HelperBase {
     public boolean checkMoreFriendsButtom() {
         return isElementPresent(By.cssSelector(".show-more.mm-clickable.mm-showMore"));
     }
+
+    public boolean checkTrackInfo() {
+        return isElementPresent(By.cssSelector(".eventContent__audio-dur"));
+    }
 }
