@@ -41,7 +41,7 @@ public class ApplicationManager {
         }
 
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        wd.get("http://m.my.mail.ru/cgi-bin/login");
+        wd.get("http://m.my.myalpha6.i.mail.ru/cgi-bin/login");
         profileHelper = new ProfileHelper(wd);
         navigationHelper = new NavigationHelper(wd);
         publisherHelper = new PublisherHelper(wd);

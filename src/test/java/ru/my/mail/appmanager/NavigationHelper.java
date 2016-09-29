@@ -41,7 +41,7 @@ public class NavigationHelper extends HelperBase {
     }
 
     public void goToMyMusicMyMusicPlaylist() {
-        click(By.xpath("//*[@id='wrap']/div[5]/div[3]/div[2]/a"));
+        click(By.xpath("//*[@id='wrap']/div[4]/div[3]/div[2]/a"));
     }
 
     public void goToMyMusicFriends() {
@@ -73,9 +73,6 @@ public class NavigationHelper extends HelperBase {
     }
 
     public void gotoMyFirstFriend() {
-        /*
-        Оптимизировать xpath, а в идеале заменить css
-         */
-        click(By.xpath("//*[@id='wrap']/div[5]/ul/li[1]/a/span[1]"));
+        click(By.cssSelector(".list-item__link"));
     }
 }
